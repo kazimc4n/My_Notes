@@ -18,12 +18,10 @@ def count_substring(s, target):
 
     if s[:len(target)] == target:
         count = 1
-        print(s[:len(target)])
 
     if len(s) < len(target):
         return 0
 
     return count + count_substring(s[1:],target)
-    print(s[1:])
 
 print(count_substring("abababab", "aba")) # -> 3
